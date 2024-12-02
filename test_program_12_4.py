@@ -2,6 +2,9 @@ import test_12_4
 import unittest
 import logging
 
+logging.basicConfig(level=logging.INFO, filemode='w', filename='runner_tests.log',
+                        encoding='utf-8', format='%(levelname)s | %(message)s')
+
 class RunnerTest(unittest.TestCase):
     is_frozen = False
 
@@ -93,8 +96,7 @@ class TournamentTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    logging.basicConfig(level=logging.INFO, filemode='w', filename='runner_tests.log',
-                        encoding='utf-8', format='%(levelname)s | %(message)s')
+
 
 
 # , exc_info=True
