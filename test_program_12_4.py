@@ -27,21 +27,21 @@ class RunnerTest(unittest.TestCase):
     #     self.assertEqual(runner3.distance, 6)
 
     def test_walk(self):
-        walker1 = test_12_4.Runner('Usain', speed=-10)
         try:
+            walker1 = test_12_4.Runner('Usain', speed=-10)
             walker1.walk()
             logging.info('"test_walk" выполнен успешно')
         except ValueError:
-            logging.warning('Неверная скорость для Runner')
+            logging.warning('Неверная скорость для Runner', exc_info=True)
 
 
     def test_run(self):
-        runner1 = test_12_4.Runner(356, speed=10)
         try:
+            runner1 = test_12_4.Runner(356, speed=10)
             runner1.run()
             logging.info('"test_run" выполнен успешно')
         except TypeError:
-            logging.warning('Неверный тип данных для объекта Runner')
+            logging.warning('Неверный тип данных для объекта Runner', exc_info=True)
 
 
 
